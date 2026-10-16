@@ -1,0 +1,8 @@
+set,values
+edge_targets,26|36|38|42|50|53|54
+edge_sources,14|15|22|23|27|29|30|39|43|45|51
+removed_bits,42|50|53|54
+added_bits,14|15|22|23
+total_edges,20
+most_common_source,23 (3x)
+most_common_target,54 (7x)

@@ -1,0 +1,404 @@
+Stage123 stdout/stderr log = /Users/tyler/Desktop/GT/Research/ListDecodingOfPolarCodes/Classical/pac_sparse_pipeline_out/_active_logs/stage123_stdout_stderr_20260828_132038_pid30549.log
+============================================================
+Stage 1: information-set design under generic PAC
+Stage 2: iterative PAC precoder construction (path-based scoring)
+============================================================
+N = 64, K = 32, EbN0_dB = 3.0, L = 32
+generic taps         = [1, 0, 1, 1, 0, 1, 1]
+reliability          = dega
+set_objective        = fer
+set_risk_score       = sigma  (use :sigma_llr for σ * |LLR| ranking)
+kicker_sizes (set)   = Int64[]
+pac_design           = edges  (legacy per-edge)
+pac_initial          = generic
+pac_max_edges        = 96  (max_span = 64)
+pac_target           = frozen
+pac_kicker_sizes     = [1]
+pac batch confirms   = 5 of 32
+pac exploration      = true  return_best_seen = true
+pac L0-aware scoring = true  lost_window = 32
+sigma                = 0.7079457843841379
+Stage-1 Tmat: generic PAC from taps = [1, 0, 1, 1, 0, 1, 1]
+
+--- Spectrum: initial generic PAC set ---
+A length = 32, trials = 300000, sigma = 0.707946
+Initial A = [14, 15, 16, 22, 23, 24, 27, 28, 29, 30, 31, 32, 39, 40, 43, 44, 45, 46, 47, 48, 51, 52, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64]
+Initial tail objective (fer) = 3.28000000e-03
+
+Stage-1 risk report sorted by active priority
+  set_risk_score = sigma, risk_mix = (lambda = 0, sigma = 1), set_sigma_domain = source
+  chosen sigma = source-domain/pre-convolution support
+  support paths considered = 1625, skipped_missing = 0, normalized by trials = 300000
+  freeze_use_rho = false, freeze_rho_floor = 0, freeze_rho_min = 0
+  add_use_zhat_dang = false, add_zhat_weight = 1, add_zhat_floor = 0, n_paths_llr = 1625
+     i   fe_cnt  src_cnt post_cnt     both        rho     Zhat_d     priority       lambda        sigma    src_sigma   post_sigma   src_sigLLR  post_sigLLR      |LLR|_d     q10|LLR|
+------ -------- -------- -------- -------- ---------- ---------- ------------ ------------ ------------ ------------ ------------ ------------ ------------ ------------ ------------
+    57       67      835      804      464     0.5557 7.2001e-02   2.7833e-03   2.2333e-04   2.7833e-03   2.7833e-03   2.6800e-03   2.9367e-02   2.7872e-02   1.0892e+01   2.8781e+00
+    58        0      789      725      411     0.5209 4.8145e-04   2.6300e-03   0.0000e+00   2.6300e-03   2.6300e-03   2.4167e-03   7.8182e-02   7.0932e-02   3.0191e+01   1.9481e+01
+    62        0      789      549      272     0.3447 6.9753e-13   2.6300e-03   0.0000e+00   2.6300e-03   2.6300e-03   1.8300e-03   2.2282e-01   1.5515e-01   8.5724e+01   6.8279e+01
+    60        0      783      532      262     0.3346 7.5130e-11   2.6100e-03   0.0000e+00   2.6100e-03   2.6100e-03   1.7733e-03   2.0550e-01   1.3990e-01   7.9687e+01   6.3081e+01
+    61        0      781      703      364     0.4661 1.8308e-03   2.6033e-03   0.0000e+00   2.6033e-03   2.6033e-03   2.3433e-03   9.2932e-02   8.3017e-02   3.5702e+01   2.3716e+01
+    44        0      779      684      374     0.4801 9.9646e-03   2.5967e-03   0.0000e+00   2.5967e-03   2.5967e-03   2.2800e-03   4.8050e-02   4.1132e-02   1.9012e+01   9.5656e+00
+    47        0      776      671      339     0.4369 2.1927e-03   2.5867e-03   0.0000e+00   2.5867e-03   2.5867e-03   2.2367e-03   6.3297e-02   5.3499e-02   2.4683e+01   1.4725e+01
+    59        0      775      729      352     0.4542 8.5891e-04   2.5833e-03   0.0000e+00   2.5833e-03   2.5833e-03   2.4300e-03   8.5282e-02   7.7384e-02   3.2646e+01   2.1123e+01
+    30        5      767      691      360     0.4694 6.5347e-03   2.5567e-03   1.6667e-05   2.5567e-03   2.5567e-03   2.3033e-03   4.3590e-02   3.9842e-02   1.8062e+01   9.6811e+00
+    52        0      760      727      364     0.4789 3.1639e-03   2.5333e-03   0.0000e+00   2.5333e-03   2.5333e-03   2.4233e-03   5.9175e-02   5.6403e-02   2.3623e+01   1.2922e+01
+    28        1      758      643      319     0.4208 2.6704e-02   2.5267e-03   3.3333e-06   2.5267e-03   2.5267e-03   2.1433e-03   3.6699e-02   3.0817e-02   1.5104e+01   6.2904e+00
+    22      684      757      745      465     0.6143 3.0086e-01   2.5233e-03   2.2800e-03   2.5233e-03   2.5233e-03   2.4833e-03   8.3324e-03   8.3096e-03   3.6422e+00   5.1496e-01
+    64        0      731      311      168     0.2298 5.2112e-37   2.4367e-03   0.0000e+00   2.4367e-03   2.4367e-03   1.0367e-03   4.8998e-01   2.0725e-01   2.0293e+02   1.7485e+02
+    31        0      726      667      332     0.4573 5.4945e-03   2.4200e-03   0.0000e+00   2.4200e-03   2.4200e-03   2.2233e-03   4.6791e-02   4.2504e-02   1.9928e+01   1.0922e+01
+    46        0      725      695      365     0.5034 4.2041e-03   2.4167e-03   0.0000e+00   2.4167e-03   2.4167e-03   2.3167e-03   5.2834e-02   4.9983e-02   2.2407e+01   1.2722e+01
+    15     1828      723      723      723     1.0000 3.3071e-01   2.4100e-03   6.0933e-03   2.4100e-03   2.4100e-03   2.4100e-03   6.8412e-03   6.8412e-03   3.3071e+00   5.2152e-01
+    63        0      723      539      255     0.3527 1.1554e-11   2.4100e-03   0.0000e+00   2.4100e-03   2.4100e-03   1.7967e-03   2.1405e-01   1.6017e-01   8.9634e+01   7.2189e+01
+    55        0      717      697      327     0.4561 2.8651e-03   2.3900e-03   0.0000e+00   2.3900e-03   2.3900e-03   2.3233e-03   6.9106e-02   6.4985e-02   2.9281e+01   1.8278e+01
+    39       52      715      715      715     1.0000 1.9882e-01   2.3833e-03   1.7333e-04   2.3833e-03   2.3833e-03   2.3833e-03   1.1495e-02   1.1495e-02   5.3257e+00   1.0426e+00
+    45        7      712      758      360     0.5056 1.0140e-01   2.3733e-03   2.3333e-05   2.3733e-03   2.3733e-03   2.5267e-03   1.7822e-02   1.9202e-02   7.8119e+00   2.1583e+00
+    43       52      709      737      408     0.5755 1.6243e-01   2.3633e-03   1.7333e-04   2.3633e-03   2.3633e-03   2.4567e-03   1.3173e-02   1.4244e-02   6.1800e+00   1.2519e+00
+    23      259      708      708      708     1.0000 2.6139e-01   2.3600e-03   8.6333e-04   2.3600e-03   2.3600e-03   2.3600e-03   8.6465e-03   8.6465e-03   4.1537e+00   7.9487e-01
+    32        0      702      518      277     0.3946 7.9140e-09   2.3400e-03   0.0000e+00   2.3400e-03   2.3400e-03   1.7267e-03   1.1929e-01   8.6418e-02   5.2239e+01   3.9097e+01
+    29       56      699      701      313     0.4478 1.5803e-01   2.3300e-03   1.8667e-04   2.3300e-03   2.3300e-03   2.3367e-03   1.2822e-02   1.2850e-02   5.9245e+00   1.4185e+00
+    48        0      694      488      260     0.3746 9.5702e-10   2.3133e-03   0.0000e+00   2.3133e-03   2.3133e-03   1.6267e-03   1.4073e-01   9.8276e-02   6.2750e+01   4.8534e+01
+    51        0      690      743      358     0.5188 1.0430e-01   2.3000e-03   0.0000e+00   2.3000e-03   2.3000e-03   2.4767e-03   1.7445e-02   1.9745e-02   8.1229e+00   2.0182e+00
+    56        0      687      529      263     0.3828 1.8635e-11   2.2900e-03   0.0000e+00   2.2900e-03   2.2900e-03   1.7633e-03   1.6203e-01   1.2263e-01   7.2434e+01   5.5383e+01
+    27      142      660      691      363     0.5500 2.0916e-01   2.2000e-03   4.7333e-04   2.2000e-03   2.2000e-03   2.3033e-03   1.0008e-02   1.0723e-02   4.9759e+00   1.0686e+00
+    14     3316      643      643      643     1.0000 3.4695e-01   2.1433e-03   1.1053e-02   2.1433e-03   2.1433e-03   2.1433e-03   5.5929e-03   5.5929e-03   3.0269e+00   4.7930e-01
+    40        1      630      630      630     1.0000 2.1057e-02   2.1000e-03   3.3333e-06   2.1000e-03   2.1000e-03   2.1000e-03   3.1218e-02   3.1218e-02   1.6381e+01   7.0357e+00
+    24       40      604      625      236     0.3907 4.7991e-02   2.0133e-03   1.3333e-04   2.0133e-03   2.0133e-03   2.0833e-03   2.2731e-02   2.3369e-02   1.2497e+01   4.1860e+00
+    16      288      572      539      234     0.4091 8.2912e-02   1.9067e-03   9.6000e-04   1.9067e-03   1.9067e-03   1.7967e-03   1.5773e-02   1.5324e-02   1.0089e+01   2.5391e+00
+
+Stage-1 add-candidate report (frozen bits, in kicker add-pool order)
+  active ranking: add_strategy = :q10_llr_dang (highest q10|LLR|_d, ties → DEGA)
+  add_use_zhat_dang = false, add_zhat_weight = 1, add_zhat_floor = 0
+  n_paths_llr = 1625 (dangerous samples backing Zhat / |LLR| stats)
+  post_sig filter: keep_quantile = 0.5 → post_sig ≤ 1.8433e-03, kept 17 / 32 frozen bits
+     i    rel(DEGA)       Zhat_d      |LLR|_d   q10|LLR|_d   sign_err_d     post_sig  post_sigLLR   src_sigLLR sigma_chosen
+------ ------------ ------------ ------------ ------------ ------------ ------------ ------------ ------------ ------------
+    50   3.5899e+00   1.3585e-01   6.9323e+00   1.6742e+00   3.6431e-01   1.7767e-03   1.1905e-02   0.0000e+00   0.0000e+00
+    12   1.2489e+00   3.6021e-01   2.8393e+00   5.4192e-01   3.4769e-01   0.0000e+00   0.0000e+00   0.0000e+00   0.0000e+00
+     8   1.0267e+00   3.7691e-01   2.6551e+00   4.1975e-01   3.4154e-01   0.0000e+00   0.0000e+00   0.0000e+00   0.0000e+00
+    19   7.6744e-01   6.0135e-01   1.2349e+00   1.7376e-01   4.8738e-01   1.7967e-03   2.0513e-03   0.0000e+00   0.0000e+00
+    10   4.2830e-01   6.5142e-01   1.0054e+00   1.5131e-01   4.6769e-01   0.0000e+00   0.0000e+00   0.0000e+00   0.0000e+00
+    21   9.7162e-01   5.8374e-01   1.3352e+00   1.4986e-01   4.6954e-01   1.8433e-03   2.2002e-03   0.0000e+00   0.0000e+00
+     7   3.8698e-01   6.5699e-01   9.9074e-01   1.4975e-01   4.5292e-01   0.0000e+00   0.0000e+00   0.0000e+00   0.0000e+00
+    11   5.2691e-01   6.4318e-01   1.0412e+00   1.4956e-01   4.8308e-01   0.0000e+00   0.0000e+00   0.0000e+00   0.0000e+00
+    13   6.8248e-01   6.4124e-01   1.0706e+00   1.4692e-01   4.5969e-01   0.0000e+00   0.0000e+00   0.0000e+00   0.0000e+00
+     6   3.0804e-01   6.6147e-01   9.5065e-01   1.3644e-01   4.7631e-01   0.0000e+00   0.0000e+00   0.0000e+00   0.0000e+00
+    18   6.3831e-01   6.2826e-01   1.1068e+00   1.3592e-01   4.8738e-01   1.8433e-03   1.8605e-03   0.0000e+00   0.0000e+00
+     4   2.3618e-01   6.7839e-01   9.0260e-01   1.3106e-01   4.9908e-01   0.0000e+00   0.0000e+00   0.0000e+00   0.0000e+00
+     5   4.5391e-02   8.4328e-01   3.6536e-01   4.7820e-02   5.2985e-01   0.0000e+00   0.0000e+00   0.0000e+00   0.0000e+00
+     9   8.4646e-02   8.4521e-01   3.6401e-01   4.6582e-02   5.2985e-01   0.0000e+00   0.0000e+00   0.0000e+00   0.0000e+00
+     3   2.7153e-02   8.5471e-01   3.3285e-01   4.4221e-02   4.7815e-01   0.0000e+00   0.0000e+00   0.0000e+00   0.0000e+00
+     2   1.9453e-02   8.6417e-01   3.0962e-01   3.4407e-02   5.1815e-01   0.0000e+00   0.0000e+00   0.0000e+00   0.0000e+00
+     1   1.8918e-04   9.5300e-01   9.8799e-02   9.6962e-03   5.3969e-01   0.0000e+00   0.0000e+00   0.0000e+00   0.0000e+00
+  ... excluded by post_sig filter (top by post_sig):
+    53   4.2275e+00   7.3664e-02   9.6611e+00   2.8637e+00   4.7815e-01   2.6200e-03   2.5440e-02   0.0000e+00   0.0000e+00
+    25   1.2933e+00   5.3647e-01   1.5775e+00   2.5392e-01   4.7754e-01   2.5433e-03   3.8251e-03   0.0000e+00   0.0000e+00
+    26   2.2907e+00   2.5253e-01   4.2176e+00   8.1429e-01   4.6769e-01   2.5133e-03   1.0206e-02   0.0000e+00   0.0000e+00
+    33   3.8003e-01   7.8890e-01   5.1934e-01   6.2205e-02   4.9846e-01   2.4967e-03   1.3562e-03   0.0000e+00   0.0000e+00
+    37   1.4786e+00   5.2270e-01   1.6595e+00   2.2175e-01   4.9046e-01   2.4933e-03   3.9238e-03   0.0000e+00   0.0000e+00
+    34   1.0170e+00   5.5931e-01   1.4284e+00   2.0899e-01   4.8062e-01   2.4900e-03   3.4386e-03   0.0000e+00   0.0000e+00
+    49   2.3969e+00   4.0234e-01   2.4579e+00   4.2857e-01   5.2431e-01   2.3967e-03   6.0234e-03   0.0000e+00   0.0000e+00
+    36   2.1731e+00   2.6312e-01   4.0752e+00   7.8258e-01   4.6400e-01   2.3833e-03   9.0382e-03   0.0000e+00   0.0000e+00
+
+All kicker sizes exhausted (escalation) at iter 1; stopping search.
+
+All kicker sizes exhausted at iter 1; stopping search.
+
+=== Stage 2: iterative PAC precoder construction ===
+selected A                        = [14, 15, 16, 22, 23, 24, 27, 28, 29, 30, 31, 32, 39, 40, 43, 44, 45, 46, 47, 48, 51, 52, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64]
+pac_initial                       = generic
+pac_max_edges                     = 96
+pac_max_span                      = 64
+pac_target                        = frozen
+pac_kicker_sizes                  = [1]
+pac_top_edges_per_step            = 12
+pac_kicker_single_pool            = 32
+pac_candidate_sets_per_step       = 32
+pac_full_confirm_top_candidates   = 5
+pac_explore_when_stalled          = true
+pac_return_best_seen              = true
+pac_l0_aware_scoring              = true
+pac_l0_lost_window                = 32
+
+--- Spectrum: stage-2 baseline ---
+A length = 32, trials = 300000, sigma = 0.707946
+Replay buffer: 28266 of 300000 trials retained (margin <= 10.00)
+
+Stage-2 baseline objective (fer) = 3.28000000e-03
+
+--- Edge step 1  (working 3.28000000e-03, best 3.28000000e-03, dangerous events = 6798) ---
+Top single-edge candidates [saved_paths: global rank by saved-paths count]
+  L0-aware over 913 dangerous paths; kept=807, lost=106
+  ( 47 ->  54)  σ_src=0.0026  score=331  kept=329  lost_urgent=2  lost_late=17
+  ( 44 ->  54)  σ_src=0.0026  score=306  kept=305  lost_urgent=1  lost_late=11
+  ( 28 ->  54)  σ_src=0.0025  score=301  kept=300  lost_urgent=1  lost_late=19
+  ( 52 ->  53)  σ_src=0.0025  score=300  kept=298  lost_urgent=2  lost_late=19
+  ( 22 ->  54)  σ_src=0.0025  score=299  kept=297  lost_urgent=2  lost_late=25
+  ( 15 ->  54)  σ_src=0.0024  score=295  kept=295  lost_urgent=0  lost_late=27
+  ( 31 ->  54)  σ_src=0.0024  score=295  kept=294  lost_urgent=1  lost_late=27
+  ( 44 ->  53)  σ_src=0.0026  score=292  kept=291  lost_urgent=1  lost_late=10
+  ( 28 ->  53)  σ_src=0.0025  score=290  kept=289  lost_urgent=1  lost_late=16
+  ( 22 ->  53)  σ_src=0.0025  score=286  kept=284  lost_urgent=2  lost_late=22
+  ( 30 ->  54)  σ_src=0.0026  score=284  kept=283  lost_urgent=1  lost_late=21
+  ( 31 ->  53)  σ_src=0.0024  score=282  kept=281  lost_urgent=1  lost_late=24
+Candidate edge sets in this non-greedy batch:
+  batch   1  sz=1  edges=47->54  score=331  kept=329  lost_urgent=2  lost_late=17  excess=0
+  batch   2  sz=1  edges=44->54  score=306  kept=305  lost_urgent=1  lost_late=11  excess=0
+  batch   3  sz=1  edges=28->54  score=301  kept=300  lost_urgent=1  lost_late=19  excess=0
+  batch   4  sz=1  edges=52->53  score=300  kept=298  lost_urgent=2  lost_late=19  excess=0
+  batch   5  sz=1  edges=22->54  score=299  kept=297  lost_urgent=2  lost_late=25  excess=0
+  batch   6  sz=1  edges=15->54  score=295  kept=295  lost_urgent=0  lost_late=27  excess=0
+  batch   7  sz=1  edges=31->54  score=295  kept=294  lost_urgent=1  lost_late=27  excess=0
+  batch   8  sz=1  edges=44->53  score=292  kept=291  lost_urgent=1  lost_late=10  excess=0
+  batch   9  sz=1  edges=28->53  score=290  kept=289  lost_urgent=1  lost_late=16  excess=0
+  batch  10  sz=1  edges=22->53  score=286  kept=284  lost_urgent=2  lost_late=22  excess=0
+  batch  11  sz=1  edges=30->54  score=284  kept=283  lost_urgent=1  lost_late=21  excess=0
+  batch  12  sz=1  edges=31->53  score=282  kept=281  lost_urgent=1  lost_late=24  excess=0
+  ... 20 more candidate sets
+    replay sz=1 edges=47->54 : buffer errors 984 -> 1013  (fer_est 3.37666667e-03)
+    replay sz=1 edges=44->54 : buffer errors 984 -> 1023  (fer_est 3.41000000e-03)
+    replay sz=1 edges=28->54 : buffer errors 984 -> 999  (fer_est 3.33000000e-03)
+    replay sz=1 edges=52->53 : buffer errors 984 -> 1091  (fer_est 3.63666667e-03)
+    replay sz=1 edges=22->54 : buffer errors 984 -> 987  (fer_est 3.29000000e-03)
+    replay sz=1 edges=15->54 : buffer errors 984 -> 991  (fer_est 3.30333333e-03)
+    replay sz=1 edges=31->54 : buffer errors 984 -> 974  (fer_est 3.24666667e-03)
+    replay sz=1 edges=44->53 : buffer errors 984 -> 975  (fer_est 3.25000000e-03)
+    replay sz=1 edges=28->53 : buffer errors 984 -> 998  (fer_est 3.32666667e-03)
+    replay sz=1 edges=22->53 : buffer errors 984 -> 1004  (fer_est 3.34666667e-03)
+    replay sz=1 edges=30->54 : buffer errors 984 -> 972  (fer_est 3.24000000e-03)
+    replay sz=1 edges=31->53 : buffer errors 984 -> 982  (fer_est 3.27333333e-03)
+    replay sz=1 edges=45->54 : buffer errors 984 -> 1100  (fer_est 3.66666667e-03)
+    replay sz=1 edges=15->53 : buffer errors 984 -> 985  (fer_est 3.28333333e-03)
+    replay sz=1 edges=22->50 : buffer errors 984 -> 977  (fer_est 3.25666667e-03)
+    replay sz=1 edges=31->50 : buffer errors 984 -> 977  (fer_est 3.25666667e-03)
+    replay sz=1 edges=32->54 : buffer errors 984 -> 1004  (fer_est 3.34666667e-03)
+    replay sz=1 edges=46->54 : buffer errors 984 -> 1077  (fer_est 3.59000000e-03)
+    replay sz=1 edges=39->54 : buffer errors 984 -> 1034  (fer_est 3.44666667e-03)
+    replay sz=1 edges=28->50 : buffer errors 984 -> 993  (fer_est 3.31000000e-03)
+    replay sz=1 edges=29->54 : buffer errors 984 -> 1014  (fer_est 3.38000000e-03)
+    replay sz=1 edges=23->54 : buffer errors 984 -> 978  (fer_est 3.26000000e-03)
+    replay sz=1 edges=15->50 : buffer errors 984 -> 968  (fer_est 3.22666667e-03)
+    replay sz=1 edges=30->53 : buffer errors 984 -> 997  (fer_est 3.32333333e-03)
+    replay sz=1 edges=45->53 : buffer errors 984 -> 1067  (fer_est 3.55666667e-03)
+    replay sz=1 edges=24->54 : buffer errors 984 -> 996  (fer_est 3.32000000e-03)
+    replay sz=1 edges=39->53 : buffer errors 984 -> 1028  (fer_est 3.42666667e-03)
+    replay sz=1 edges=28->42 : buffer errors 984 -> 988  (fer_est 3.29333333e-03)
+    replay sz=1 edges=15->42 : buffer errors 984 -> 951  (fer_est 3.17000000e-03)
+    replay sz=1 edges=22->42 : buffer errors 984 -> 985  (fer_est 3.28333333e-03)
+    replay sz=1 edges=32->53 : buffer errors 984 -> 1006  (fer_est 3.35333333e-03)
+    replay sz=1 edges=46->53 : buffer errors 984 -> 1095  (fer_est 3.65000000e-03)
+Confirming 5 candidate sets with full trials (replay screen)
+  confirm pool  1  sz=1  edges=15->42  screen=3.17000000e-03  score=262  kept=246  lost_urgent=16  lost_late=0
+  confirm pool  2  sz=1  edges=15->50  screen=3.22666667e-03  score=269  kept=269  lost_urgent=0  lost_late=21
+  confirm pool  3  sz=1  edges=30->54  screen=3.24000000e-03  score=284  kept=283  lost_urgent=1  lost_late=21
+  confirm pool  4  sz=1  edges=31->54  screen=3.24666667e-03  score=295  kept=294  lost_urgent=1  lost_late=27
+  confirm pool  5  sz=1  edges=44->53  screen=3.25000000e-03  score=292  kept=291  lost_urgent=1  lost_late=10
+
+--- Spectrum: confirm step=1 sz=1 small_rank=29 confirm=1 edges=15->42 ---
+A length = 32, trials = 300000, sigma = 0.707946
+    full   (300k trials)  sz=1 edges=15->42 : 3.26666667e-03 (prev 3.28000000e-03, small 3.17000000e-03)
+
+--- Spectrum: confirm step=1 sz=1 small_rank=23 confirm=2 edges=15->50 ---
+A length = 32, trials = 300000, sigma = 0.707946
+    full   (300k trials)  sz=1 edges=15->50 : 3.29000000e-03 (prev 3.28000000e-03, small 3.22666667e-03)
+
+--- Spectrum: confirm step=1 sz=1 small_rank=11 confirm=3 edges=30->54 ---
+A length = 32, trials = 300000, sigma = 0.707946
+    full   (300k trials)  sz=1 edges=30->54 : 3.29666667e-03 (prev 3.28000000e-03, small 3.24000000e-03)
+
+--- Spectrum: confirm step=1 sz=1 small_rank=7 confirm=4 edges=31->54 ---
+A length = 32, trials = 300000, sigma = 0.707946
+    full   (300k trials)  sz=1 edges=31->54 : 3.29333333e-03 (prev 3.28000000e-03, small 3.24666667e-03)
+
+--- Spectrum: confirm step=1 sz=1 small_rank=8 confirm=5 edges=44->53 ---
+A length = 32, trials = 300000, sigma = 0.707946
+    full   (300k trials)  sz=1 edges=44->53 : 3.28666667e-03 (prev 3.28000000e-03, small 3.25000000e-03)
+ACCEPTED step 1  move=improve  sz=1  edges=15->42  working -> 3.26666667e-03  best -> 3.26666667e-03
+
+--- Edge step 2  (working 3.26666667e-03, best 3.26666667e-03, dangerous events = 6900) ---
+Top single-edge candidates [saved_paths: global rank by saved-paths count]
+  L0-aware over 915 dangerous paths; kept=799, lost=116
+  ( 47 ->  54)  σ_src=0.0027  score=341  kept=340  lost_urgent=1  lost_late=20
+  ( 22 ->  54)  σ_src=0.0026  score=339  kept=334  lost_urgent=5  lost_late=19
+  ( 28 ->  54)  σ_src=0.0026  score=333  kept=328  lost_urgent=5  lost_late=15
+  ( 22 ->  53)  σ_src=0.0026  score=327  kept=322  lost_urgent=5  lost_late=17
+  ( 43 ->  54)  σ_src=0.0027  score=326  kept=324  lost_urgent=2  lost_late=21
+  ( 28 ->  53)  σ_src=0.0026  score=321  kept=316  lost_urgent=5  lost_late=12
+  ( 44 ->  54)  σ_src=0.0025  score=314  kept=314  lost_urgent=0  lost_late=14
+  ( 43 ->  53)  σ_src=0.0027  score=309  kept=307  lost_urgent=2  lost_late=15
+  ( 52 ->  53)  σ_src=0.0026  score=308  kept=306  lost_urgent=2  lost_late=20
+  ( 22 ->  50)  σ_src=0.0026  score=307  kept=303  lost_urgent=4  lost_late=14
+  ( 45 ->  54)  σ_src=0.0025  score=302  kept=299  lost_urgent=3  lost_late=18
+  ( 44 ->  53)  σ_src=0.0025  score=300  kept=300  lost_urgent=0  lost_late=12
+Candidate edge sets in this non-greedy batch:
+  batch   1  sz=1  edges=47->54  score=341  kept=340  lost_urgent=1  lost_late=20  excess=0
+  batch   2  sz=1  edges=22->54  score=339  kept=334  lost_urgent=5  lost_late=19  excess=0
+  batch   3  sz=1  edges=28->54  score=333  kept=328  lost_urgent=5  lost_late=15  excess=0
+  batch   4  sz=1  edges=22->53  score=327  kept=322  lost_urgent=5  lost_late=17  excess=0
+  batch   5  sz=1  edges=43->54  score=326  kept=324  lost_urgent=2  lost_late=21  excess=0
+  batch   6  sz=1  edges=28->53  score=321  kept=316  lost_urgent=5  lost_late=12  excess=0
+  batch   7  sz=1  edges=44->54  score=314  kept=314  lost_urgent=0  lost_late=14  excess=0
+  batch   8  sz=1  edges=43->53  score=309  kept=307  lost_urgent=2  lost_late=15  excess=0
+  batch   9  sz=1  edges=52->53  score=308  kept=306  lost_urgent=2  lost_late=20  excess=0
+  batch  10  sz=1  edges=22->50  score=307  kept=303  lost_urgent=4  lost_late=14  excess=0
+  batch  11  sz=1  edges=45->54  score=302  kept=299  lost_urgent=3  lost_late=18  excess=0
+  batch  12  sz=1  edges=44->53  score=300  kept=300  lost_urgent=0  lost_late=12  excess=0
+  ... 20 more candidate sets
+    replay sz=1 edges=47->54 : buffer errors 980 -> 1001  (fer_est 3.33666667e-03)
+    replay sz=1 edges=22->54 : buffer errors 980 -> 955  (fer_est 3.18333333e-03)
+    replay sz=1 edges=28->54 : buffer errors 980 -> 980  (fer_est 3.26666667e-03)
+    replay sz=1 edges=22->53 : buffer errors 980 -> 949  (fer_est 3.16333333e-03)
+    replay sz=1 edges=43->54 : buffer errors 980 -> 1033  (fer_est 3.44333333e-03)
+    replay sz=1 edges=28->53 : buffer errors 980 -> 951  (fer_est 3.17000000e-03)
+    replay sz=1 edges=44->54 : buffer errors 980 -> 1009  (fer_est 3.36333333e-03)
+    replay sz=1 edges=43->53 : buffer errors 980 -> 1014  (fer_est 3.38000000e-03)
+    replay sz=1 edges=52->53 : buffer errors 980 -> 1046  (fer_est 3.48666667e-03)
+    replay sz=1 edges=22->50 : buffer errors 980 -> 938  (fer_est 3.12666667e-03)
+    replay sz=1 edges=45->54 : buffer errors 980 -> 1072  (fer_est 3.57333333e-03)
+    replay sz=1 edges=44->53 : buffer errors 980 -> 964  (fer_est 3.21333333e-03)
+    replay sz=1 edges=22->42 : buffer errors 980 -> 928  (fer_est 3.09333333e-03)
+    replay sz=1 edges=30->54 : buffer errors 980 -> 956  (fer_est 3.18666667e-03)
+    replay sz=1 edges=24->54 : buffer errors 980 -> 952  (fer_est 3.17333333e-03)
+    replay sz=1 edges=28->50 : buffer errors 980 -> 953  (fer_est 3.17666667e-03)
+    replay sz=1 edges=43->50 : buffer errors 980 -> 983  (fer_est 3.27666667e-03)
+    replay sz=1 edges=31->54 : buffer errors 980 -> 991  (fer_est 3.30333333e-03)
+    replay sz=1 edges=45->53 : buffer errors 980 -> 1024  (fer_est 3.41333333e-03)
+    replay sz=1 edges=39->54 : buffer errors 980 -> 995  (fer_est 3.31666667e-03)
+    replay sz=1 edges=46->54 : buffer errors 980 -> 1096  (fer_est 3.65333333e-03)
+    replay sz=1 edges=30->53 : buffer errors 980 -> 950  (fer_est 3.16666667e-03)
+    replay sz=1 edges=32->54 : buffer errors 980 -> 988  (fer_est 3.29333333e-03)
+    replay sz=1 edges=39->53 : buffer errors 980 -> 981  (fer_est 3.27000000e-03)
+    replay sz=1 edges=15->54 : buffer errors 980 -> 987  (fer_est 3.29000000e-03)
+    replay sz=1 edges=24->53 : buffer errors 980 -> 932  (fer_est 3.10666667e-03)
+    replay sz=1 edges=28->42 : buffer errors 980 -> 950  (fer_est 3.16666667e-03)
+    replay sz=1 edges=31->53 : buffer errors 980 -> 973  (fer_est 3.24333333e-03)
+    replay sz=1 edges=46->53 : buffer errors 980 -> 1068  (fer_est 3.56000000e-03)
+    replay sz=1 edges=29->54 : buffer errors 980 -> 1009  (fer_est 3.36333333e-03)
+    replay sz=1 edges=15->53 : buffer errors 980 -> 959  (fer_est 3.19666667e-03)
+    replay sz=1 edges=32->53 : buffer errors 980 -> 979  (fer_est 3.26333333e-03)
+Confirming 5 candidate sets with full trials (replay screen)
+  confirm pool  1  sz=1  edges=22->42  screen=3.09333333e-03  score=300  kept=284  lost_urgent=16  lost_late=0
+  confirm pool  2  sz=1  edges=24->53  screen=3.10666667e-03  score=282  kept=280  lost_urgent=2  lost_late=27
+  confirm pool  3  sz=1  edges=22->50  screen=3.12666667e-03  score=307  kept=303  lost_urgent=4  lost_late=14
+  confirm pool  4  sz=1  edges=22->53  screen=3.16333333e-03  score=327  kept=322  lost_urgent=5  lost_late=17
+  confirm pool  5  sz=1  edges=30->53  screen=3.16666667e-03  score=287  kept=282  lost_urgent=5  lost_late=16
+
+--- Spectrum: confirm step=2 sz=1 small_rank=13 confirm=1 edges=22->42 ---
+A length = 32, trials = 300000, sigma = 0.707946
+    full   (300k trials)  sz=1 edges=22->42 : 3.14000000e-03 (prev 3.26666667e-03, small 3.09333333e-03)
+
+--- Spectrum: confirm step=2 sz=1 small_rank=26 confirm=2 edges=24->53 ---
+A length = 32, trials = 300000, sigma = 0.707946
+    full   (300k trials)  sz=1 edges=24->53 : 3.14666667e-03 (prev 3.26666667e-03, small 3.10666667e-03)
+
+--- Spectrum: confirm step=2 sz=1 small_rank=10 confirm=3 edges=22->50 ---
+A length = 32, trials = 300000, sigma = 0.707946
+    full   (300k trials)  sz=1 edges=22->50 : 3.15666667e-03 (prev 3.26666667e-03, small 3.12666667e-03)
+
+--- Spectrum: confirm step=2 sz=1 small_rank=4 confirm=4 edges=22->53 ---
+A length = 32, trials = 300000, sigma = 0.707946
+    full   (300k trials)  sz=1 edges=22->53 : 3.21333333e-03 (prev 3.26666667e-03, small 3.16333333e-03)
+
+--- Spectrum: confirm step=2 sz=1 small_rank=22 confirm=5 edges=30->53 ---
+A length = 32, trials = 300000, sigma = 0.707946
+    full   (300k trials)  sz=1 edges=30->53 : 3.23666667e-03 (prev 3.26666667e-03, small 3.16666667e-03)
+ACCEPTED step 2  move=improve  sz=1  edges=22->42  working -> 3.14000000e-03  best -> 3.14000000e-03
+
+--- Edge step 3  (working 3.14000000e-03, best 3.14000000e-03, dangerous events = 6856) ---
+Top single-edge candidates [saved_paths: global rank by saved-paths count]
+  L0-aware over 880 dangerous paths; kept=762, lost=118
+  ( 47 ->  54)  σ_src=0.0027  score=315  kept=315  lost_urgent=0  lost_late=29
+  ( 44 ->  54)  σ_src=0.0025  score=304  kept=304  lost_urgent=0  lost_late=16
+  ( 22 ->  54)  σ_src=0.0025  score=302  kept=299  lost_urgent=3  lost_late=24
+  ( 28 ->  54)  σ_src=0.0025  score=300  kept=297  lost_urgent=3  lost_late=24
+  ( 45 ->  54)  σ_src=0.0025  score=292  kept=292  lost_urgent=0  lost_late=23
+  ( 44 ->  53)  σ_src=0.0025  score=291  kept=291  lost_urgent=0  lost_late=13
+  ( 46 ->  54)  σ_src=0.0025  score=290  kept=289  lost_urgent=1  lost_late=26
+  ( 28 ->  53)  σ_src=0.0025  score=289  kept=286  lost_urgent=3  lost_late=21
+  ( 52 ->  53)  σ_src=0.0026  score=287  kept=287  lost_urgent=0  lost_late=22
+  ( 22 ->  53)  σ_src=0.0025  score=286  kept=283  lost_urgent=3  lost_late=23
+  ( 31 ->  54)  σ_src=0.0024  score=284  kept=281  lost_urgent=3  lost_late=31
+  ( 39 ->  54)  σ_src=0.0025  score=280  kept=279  lost_urgent=1  lost_late=25
+Candidate edge sets in this non-greedy batch:
+  batch   1  sz=1  edges=47->54  score=315  kept=315  lost_urgent=0  lost_late=29  excess=0
+  batch   2  sz=1  edges=44->54  score=304  kept=304  lost_urgent=0  lost_late=16  excess=0
+  batch   3  sz=1  edges=22->54  score=302  kept=299  lost_urgent=3  lost_late=24  excess=0
+  batch   4  sz=1  edges=28->54  score=300  kept=297  lost_urgent=3  lost_late=24  excess=0
+  batch   5  sz=1  edges=45->54  score=292  kept=292  lost_urgent=0  lost_late=23  excess=0
+  batch   6  sz=1  edges=44->53  score=291  kept=291  lost_urgent=0  lost_late=13  excess=0
+  batch   7  sz=1  edges=46->54  score=290  kept=289  lost_urgent=1  lost_late=26  excess=0
+  batch   8  sz=1  edges=28->53  score=289  kept=286  lost_urgent=3  lost_late=21  excess=0
+  batch   9  sz=1  edges=52->53  score=287  kept=287  lost_urgent=0  lost_late=22  excess=0
+  batch  10  sz=1  edges=22->53  score=286  kept=283  lost_urgent=3  lost_late=23  excess=0
+  batch  11  sz=1  edges=31->54  score=284  kept=281  lost_urgent=3  lost_late=31  excess=0
+  batch  12  sz=1  edges=39->54  score=280  kept=279  lost_urgent=1  lost_late=25  excess=0
+  ... 20 more candidate sets
+    replay sz=1 edges=47->54 : buffer errors 942 -> 972  (fer_est 3.24000000e-03)
+    replay sz=1 edges=44->54 : buffer errors 942 -> 982  (fer_est 3.27333333e-03)
+    replay sz=1 edges=22->54 : buffer errors 942 -> 947  (fer_est 3.15666667e-03)
+    replay sz=1 edges=28->54 : buffer errors 942 -> 954  (fer_est 3.18000000e-03)
+    replay sz=1 edges=45->54 : buffer errors 942 -> 1028  (fer_est 3.42666667e-03)
+    replay sz=1 edges=44->53 : buffer errors 942 -> 924  (fer_est 3.08000000e-03)
+    replay sz=1 edges=46->54 : buffer errors 942 -> 1020  (fer_est 3.40000000e-03)
+    replay sz=1 edges=28->53 : buffer errors 942 -> 951  (fer_est 3.17000000e-03)
+    replay sz=1 edges=52->53 : buffer errors 942 -> 1035  (fer_est 3.45000000e-03)
+    replay sz=1 edges=22->53 : buffer errors 942 -> 952  (fer_est 3.17333333e-03)
+    replay sz=1 edges=31->54 : buffer errors 942 -> 952  (fer_est 3.17333333e-03)
+    replay sz=1 edges=39->54 : buffer errors 942 -> 985  (fer_est 3.28333333e-03)
+    replay sz=1 edges=45->53 : buffer errors 942 -> 993  (fer_est 3.31000000e-03)
+    replay sz=1 edges=46->53 : buffer errors 942 -> 1031  (fer_est 3.43666667e-03)
+    replay sz=1 edges=28->50 : buffer errors 942 -> 965  (fer_est 3.21666667e-03)
+    replay sz=1 edges=30->54 : buffer errors 942 -> 958  (fer_est 3.19333333e-03)
+    replay sz=1 edges=39->53 : buffer errors 942 -> 975  (fer_est 3.25000000e-03)
+    replay sz=1 edges=22->50 : buffer errors 942 -> 949  (fer_est 3.16333333e-03)
+    replay sz=1 edges=31->53 : buffer errors 942 -> 953  (fer_est 3.17666667e-03)
+    replay sz=1 edges=32->54 : buffer errors 942 -> 970  (fer_est 3.23333333e-03)
+    replay sz=1 edges=23->54 : buffer errors 942 -> 949  (fer_est 3.16333333e-03)
+    replay sz=1 edges=46->50 : buffer errors 942 -> 1026  (fer_est 3.42000000e-03)
+    replay sz=1 edges=29->54 : buffer errors 942 -> 966  (fer_est 3.22000000e-03)
+    replay sz=1 edges=31->50 : buffer errors 942 -> 948  (fer_est 3.16000000e-03)
+    replay sz=1 edges=15->54 : buffer errors 942 -> 972  (fer_est 3.24000000e-03)
+    replay sz=1 edges=30->53 : buffer errors 942 -> 957  (fer_est 3.19000000e-03)
+    replay sz=1 edges=28->42 : buffer errors 942 -> 957  (fer_est 3.19000000e-03)
+    replay sz=1 edges=43->54 : buffer errors 942 -> 1043  (fer_est 3.47666667e-03)
+    replay sz=1 edges=29->53 : buffer errors 942 -> 973  (fer_est 3.24333333e-03)
+    replay sz=1 edges=32->53 : buffer errors 942 -> 959  (fer_est 3.19666667e-03)
+    replay sz=1 edges=39->50 : buffer errors 942 -> 973  (fer_est 3.24333333e-03)
+    replay sz=1 edges=23->53 : buffer errors 942 -> 976  (fer_est 3.25333333e-03)
+Confirming 1 candidate sets with full trials (replay screen)
+  confirm pool  1  sz=1  edges=44->53  screen=3.08000000e-03  score=291  kept=291  lost_urgent=0  lost_late=13
+
+--- Spectrum: confirm step=3 sz=1 small_rank=6 confirm=1 edges=44->53 ---
+A length = 32, trials = 300000, sigma = 0.707946
+    full   (300k trials)  sz=1 edges=44->53 : 3.18000000e-03 (prev 3.14000000e-03, small 3.08000000e-03)
+No confirmed improving move at step 3. Best full candidate was sz=1 edges=44->53 score 3.18000000e-03.
+Exploration limit from current 3.23420000e-03, from best 3.45400000e-03, explore_used 0/0.
+
+--- Stage 2 summary ---
+edge-add steps       = 2
+working objective    = 3.14000000e-03
+best objective       = 3.14000000e-03 at step 2
+returned objective   = 3.14000000e-03
+exploratory moves    = 0
+edge-add history:
+  step  1  move=improve  sz=1  edges=15->42  full=3.2667e-03  working=3.2667e-03  best=3.2667e-03  kept=246 lost_urgent=16 late=0
+  step  2  move=improve  sz=1  edges=22->42  full=3.1400e-03  working=3.1400e-03  best=3.1400e-03  kept=284 lost_urgent=16 late=0
+
+=== Stage 2 evaluation on selected A ===
+
+--- Spectrum: final eval: identity ---
+A length = 32, trials = 300000, sigma = 0.707946
+
+--- Spectrum: final eval: generic PAC ---
+A length = 32, trials = 300000, sigma = 0.707946
+
+--- Spectrum: final eval: constructed PAC ---
+A length = 32, trials = 300000, sigma = 0.707946
+
+--- Final comparison on selected A ---
+identity            objective = 2.17633333e-02
+generic PAC         objective = 3.28000000e-03
+constructed PAC     objective = 3.16000000e-03
+Constructed beats generic by factor 1.038x.
+
+Saved outputs to: /Users/tyler/Desktop/GT/Research/ListDecodingOfPolarCodes/Classical/pac_sparse_pipeline_out/64_32_L32_SNR3_20260828_132828

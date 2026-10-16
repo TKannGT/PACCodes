@@ -1,0 +1,1222 @@
+Stage123 complete parameter snapshot
+generated_at = 2026-07-23 16:29:06
+
+[runtime]
+julia_VERSION = v"1.12.5"
+PROGRAM_FILE = "Stage123.jl"
+ARGS = String[]
+pwd = "/storage/project/r-mb364-0/tkann3/KannPolarCodes/PM_Final"
+Threads.nthreads = 128
+Base.julia_cmd = `/storage/pace-apps/manual/packages/julia/1.12.5/bin/julia -C native -J/storage/pace-apps/manual/packages/julia/1.12.5/lib/julia/sys.so -g1`
+stdout_stderr_log = "/storage/project/r-mb364-0/tkann3/KannPolarCodes/PM_Final/pac_sparse_pipeline_out/_active_logs/stage123_stdout_stderr_20260723_144456_pid27744.log"
+ENV["SLURM_JOB_ID"] = "11399532"
+ENV["SLURM_JOB_NAME"] = "julia_threaded_job"
+ENV["SLURM_NODELIST"] = "atl1-1-01-006-18-1"
+ENV["SLURM_CPUS_PER_TASK"] = "128"
+ENV["SLURM_NTASKS"] = "1"
+ENV["SLURM_MEM_PER_NODE"] = "409600"
+ENV["SLURM_SUBMIT_DIR"] = "/storage/project/r-mb364-0/tkann3/KannPolarCodes/PM_Final"
+ENV["JULIA_PROJECT"] = "/storage/project/r-mb364-0/tkann3/KannPolarCodes"
+ENV["JULIA_NUM_THREADS"] = "128"
+
+[PipelineConfig fields]
+N = 512
+K = 256
+EbN0_dB = 2.5
+L = 16
+generic_taps = 7-element Array{Int64, 1}:
+ 1
+ 0
+ 1
+ 1
+ 0
+ 1
+ 1
+set_custom_Tmat = nothing
+set_custom_Tmat_path = nothing
+initial_A = 256-element Array{Int64, 1}:
+  96
+ 112
+ 120
+ 123
+ 124
+ 125
+ 126
+ 127
+ 128
+ 160
+ 175
+ 176
+ 180
+ 182
+ 183
+ 184
+ 186
+ 187
+ 188
+ 189
+ 190
+ 191
+ 192
+ 204
+ 206
+ 207
+ 208
+ 212
+ 214
+ 215
+ 216
+ 218
+ 219
+ 220
+ 221
+ 222
+ 223
+ 224
+ 228
+ 230
+ 231
+ 232
+ 233
+ 234
+ 235
+ 236
+ 237
+ 238
+ 239
+ 240
+ 241
+ 242
+ 243
+ 244
+ 245
+ 246
+ 247
+ 248
+ 249
+ 250
+ 251
+ 252
+ 253
+ 254
+ 255
+ 256
+ 284
+ 286
+ 287
+ 288
+ 296
+ 300
+ 302
+ 303
+ 304
+ 308
+ 310
+ 311
+ 312
+ 313
+ 314
+ 315
+ 316
+ 317
+ 318
+ 319
+ 320
+ 328
+ 332
+ 333
+ 334
+ 335
+ 336
+ 339
+ 340
+ 341
+ 342
+ 343
+ 344
+ 345
+ 346
+ 347
+ 348
+ 349
+ 350
+ 351
+ 352
+ 354
+ 355
+ 356
+ 357
+ 358
+ 359
+ 360
+ 361
+ 362
+ 363
+ 364
+ 365
+ 366
+ 367
+ 368
+ 369
+ 370
+ 371
+ 372
+ 373
+ 374
+ 375
+ 376
+ 377
+ 378
+ 379
+ 380
+ 381
+ 382
+ 383
+ 384
+ 391
+ 392
+ 394
+ 395
+ 396
+ 397
+ 398
+ 399
+ 400
+ 402
+ 403
+ 404
+ 405
+ 406
+ 407
+ 408
+ 409
+ 410
+ 411
+ 412
+ 413
+ 414
+ 415
+ 416
+ 418
+ 419
+ 420
+ 421
+ 422
+ 423
+ 424
+ 425
+ 426
+ 427
+ 428
+ 429
+ 430
+ 431
+ 432
+ 433
+ 434
+ 435
+ 436
+ 437
+ 438
+ 439
+ 440
+ 441
+ 442
+ 443
+ 444
+ 445
+ 446
+ 447
+ 448
+ 450
+ 451
+ 452
+ 453
+ 454
+ 455
+ 456
+ 457
+ 458
+ 459
+ 460
+ 461
+ 462
+ 463
+ 464
+ 465
+ 466
+ 467
+ 468
+ 469
+ 470
+ 471
+ 472
+ 473
+ 474
+ 475
+ 476
+ 477
+ 478
+ 479
+ 480
+ 481
+ 482
+ 483
+ 484
+ 485
+ 486
+ 487
+ 488
+ 489
+ 490
+ 491
+ 492
+ 493
+ 494
+ 495
+ 496
+ 497
+ 498
+ 499
+ 500
+ 501
+ 502
+ 503
+ 504
+ 505
+ 506
+ 507
+ 508
+ 509
+ 510
+ 511
+ 512
+reliability_method = :dega
+reliability_Q = 24
+initial_reliability_method = :dega
+set_iters = 10
+n_trials_set = 300000
+n_trials_candidate = 100000
+nremove = 4
+nadd = 4
+max_candidates_per_iter = 16
+set_full_eval_top_k = 8
+set_full_eval_only_small_improvers = false
+set_risk_score = :sigma
+set_objective = :fer
+min_set_improvement = 0.0
+risk_mix = (lambda = 0.0, sigma = 1.0)
+set_sigma_domain = :source
+set_sigma_pre_weight = 1.0
+set_sigma_post_weight = 1.0
+set_candidate_generator = :local
+freeze_use_rho = false
+freeze_rho_floor = 0.0
+freeze_rho_min = 0.0
+add_use_zhat_dang = false
+add_zhat_weight = 1.0
+add_zhat_floor = 0.0
+add_post_sig_keep_quantile = 0.5
+add_strategy = :q10_llr_dang
+kicker_sizes = 1-element Array{Int64, 1}:
+ 1
+max_kicker_candidates = 128
+set_kicker_escalate = true
+pac_max_edges = 96
+pac_max_span = 512
+pac_top_edges_per_step = 12
+pac_min_improvement = 0.0
+pac_n_trials_small = 50000
+pac_n_trials_full = 300000
+pac_min_events_for_edges = 20
+pac_target = :frozen
+pac_kicker_sizes = 4-element Array{Int64, 1}:
+ 1
+ 2
+ 3
+ 4
+pac_kicker_max_candidates = 192
+pac_candidate_sets_per_step = 32
+pac_full_confirm_top_candidates = 12
+pac_kicker_single_pool = 32
+pac_small_screen_slack_events = 2.0
+pac_confirm_best_even_if_screen_fails = true
+pac_explore_when_stalled = true
+pac_max_explore_steps = 0
+pac_explore_max_rel_worse = 0.03
+pac_explore_max_abs_worse = 0.0
+pac_explore_max_rel_above_best = 0.1
+pac_explore_max_abs_above_best = 0.0
+pac_return_best_seen = true
+pac_only_dangerous = true
+pac_edge_ranking = :saved_paths
+pac_source_first_min_saved = 1
+pac_edge_metric = :trials
+pac_l0_aware_scoring = true
+pac_l0_lost_window = 32
+pac_l0_kept_weight = 1.0
+pac_l0_lost_weight = 1.0
+pac_l0_late_penalty = 0.0
+pac_initial = :identity
+pac_custom_Tmat = nothing
+pac_custom_Tmat_path = nothing
+pac_design = :edges
+pac_replay_screen = true
+pac_replay_delta = 10.0
+pac_parity_max_steps = 32
+pac_parity_source_pool = 48
+pac_parity_max_flip_rounds = 64
+pac_parity_restarts = 8
+pac_parity_targets_screened = 24
+pac_parity_candidates_per_step = 8
+pac_parity_full_confirm = 3
+pac_parity_min_trial_gain = 2.0
+pac_parity_threshold = 0.0
+pac_parity_max_col_weight = 3
+pac_parity_tap_penalty = 1.0
+pac_parity_bulk_prune = false
+pac_parity_bulk_prune_slack = 0
+pac_parity_bulk_prune_rel_slack = 0.02
+n_trials_eval = 300000
+enable_joint_stage3 = false
+joint_iterations = 5
+joint_max_remove_candidates = 6
+joint_max_promote_candidates = 8
+joint_max_amplifiers_per_source = 4
+joint_max_edges_per_move = 1
+joint_allow_bare_swap = true
+joint_allow_edge_only = false
+joint_max_total_candidates = 24
+joint_full_eval_top_k = 8
+joint_n_trials_small = 100000
+joint_n_trials_full = 300000
+joint_min_improvement = 0.0
+joint_w_remove = 1.0
+joint_w_add = 1.0
+joint_w_edge = 0.0
+modes = (:explicit,)
+skip_all_positive = true
+eta_grid = 0.0:0.1:5.0
+alphas = (0.01, 0.05, 0.1)
+seed = 7
+eval_seed = 11
+outdir = "/storage/project/r-mb364-0/tkann3/KannPolarCodes/PM_Final/pac_sparse_pipeline_out"
+save_matrices = true
+verbose = true
+
+[derived / effective values]
+initial_A_effective = 256-element Array{Int64, 1}:
+  96
+ 112
+ 120
+ 123
+ 124
+ 125
+ 126
+ 127
+ 128
+ 160
+ 175
+ 176
+ 180
+ 182
+ 183
+ 184
+ 186
+ 187
+ 188
+ 189
+ 190
+ 191
+ 192
+ 204
+ 206
+ 207
+ 208
+ 212
+ 214
+ 215
+ 216
+ 218
+ 219
+ 220
+ 221
+ 222
+ 223
+ 224
+ 228
+ 230
+ 231
+ 232
+ 233
+ 234
+ 235
+ 236
+ 237
+ 238
+ 239
+ 240
+ 241
+ 242
+ 243
+ 244
+ 245
+ 246
+ 247
+ 248
+ 249
+ 250
+ 251
+ 252
+ 253
+ 254
+ 255
+ 256
+ 284
+ 286
+ 287
+ 288
+ 296
+ 300
+ 302
+ 303
+ 304
+ 308
+ 310
+ 311
+ 312
+ 313
+ 314
+ 315
+ 316
+ 317
+ 318
+ 319
+ 320
+ 328
+ 332
+ 333
+ 334
+ 335
+ 336
+ 339
+ 340
+ 341
+ 342
+ 343
+ 344
+ 345
+ 346
+ 347
+ 348
+ 349
+ 350
+ 351
+ 352
+ 354
+ 355
+ 356
+ 357
+ 358
+ 359
+ 360
+ 361
+ 362
+ 363
+ 364
+ 365
+ 366
+ 367
+ 368
+ 369
+ 370
+ 371
+ 372
+ 373
+ 374
+ 375
+ 376
+ 377
+ 378
+ 379
+ 380
+ 381
+ 382
+ 383
+ 384
+ 391
+ 392
+ 394
+ 395
+ 396
+ 397
+ 398
+ 399
+ 400
+ 402
+ 403
+ 404
+ 405
+ 406
+ 407
+ 408
+ 409
+ 410
+ 411
+ 412
+ 413
+ 414
+ 415
+ 416
+ 418
+ 419
+ 420
+ 421
+ 422
+ 423
+ 424
+ 425
+ 426
+ 427
+ 428
+ 429
+ 430
+ 431
+ 432
+ 433
+ 434
+ 435
+ 436
+ 437
+ 438
+ 439
+ 440
+ 441
+ 442
+ 443
+ 444
+ 445
+ 446
+ 447
+ 448
+ 450
+ 451
+ 452
+ 453
+ 454
+ 455
+ 456
+ 457
+ 458
+ 459
+ 460
+ 461
+ 462
+ 463
+ 464
+ 465
+ 466
+ 467
+ 468
+ 469
+ 470
+ 471
+ 472
+ 473
+ 474
+ 475
+ 476
+ 477
+ 478
+ 479
+ 480
+ 481
+ 482
+ 483
+ 484
+ 485
+ 486
+ 487
+ 488
+ 489
+ 490
+ 491
+ 492
+ 493
+ 494
+ 495
+ 496
+ 497
+ 498
+ 499
+ 500
+ 501
+ 502
+ 503
+ 504
+ 505
+ 506
+ 507
+ 508
+ 509
+ 510
+ 511
+ 512
+selected_A_after_stage1 = 256-element Array{Int64, 1}:
+  64
+  96
+ 112
+ 118
+ 120
+ 122
+ 123
+ 124
+ 125
+ 126
+ 127
+ 128
+ 160
+ 172
+ 175
+ 176
+ 180
+ 182
+ 183
+ 184
+ 186
+ 187
+ 188
+ 189
+ 190
+ 191
+ 192
+ 204
+ 206
+ 207
+ 208
+ 212
+ 214
+ 215
+ 216
+ 217
+ 218
+ 219
+ 220
+ 221
+ 222
+ 223
+ 224
+ 228
+ 229
+ 230
+ 231
+ 232
+ 233
+ 234
+ 235
+ 236
+ 237
+ 238
+ 239
+ 240
+ 241
+ 242
+ 243
+ 244
+ 245
+ 246
+ 247
+ 248
+ 249
+ 250
+ 251
+ 252
+ 253
+ 254
+ 255
+ 256
+ 284
+ 286
+ 287
+ 288
+ 296
+ 300
+ 302
+ 303
+ 304
+ 308
+ 310
+ 311
+ 312
+ 313
+ 314
+ 315
+ 316
+ 317
+ 318
+ 319
+ 320
+ 328
+ 332
+ 333
+ 334
+ 335
+ 336
+ 338
+ 339
+ 340
+ 341
+ 342
+ 343
+ 344
+ 345
+ 346
+ 347
+ 348
+ 349
+ 350
+ 351
+ 352
+ 354
+ 355
+ 356
+ 357
+ 358
+ 359
+ 360
+ 361
+ 362
+ 363
+ 364
+ 365
+ 366
+ 367
+ 368
+ 369
+ 370
+ 371
+ 372
+ 373
+ 374
+ 375
+ 376
+ 377
+ 378
+ 379
+ 380
+ 381
+ 382
+ 383
+ 384
+ 391
+ 392
+ 394
+ 395
+ 396
+ 397
+ 398
+ 399
+ 400
+ 402
+ 403
+ 404
+ 405
+ 406
+ 407
+ 408
+ 409
+ 410
+ 411
+ 412
+ 413
+ 414
+ 415
+ 416
+ 418
+ 419
+ 421
+ 422
+ 423
+ 424
+ 425
+ 426
+ 427
+ 428
+ 429
+ 430
+ 431
+ 432
+ 433
+ 434
+ 435
+ 436
+ 437
+ 438
+ 439
+ 440
+ 441
+ 442
+ 443
+ 444
+ 445
+ 446
+ 447
+ 448
+ 450
+ 451
+ 452
+ 453
+ 454
+ 455
+ 456
+ 457
+ 458
+ 459
+ 460
+ 461
+ 462
+ 463
+ 464
+ 465
+ 467
+ 468
+ 469
+ 470
+ 471
+ 472
+ 473
+ 474
+ 475
+ 476
+ 478
+ 479
+ 481
+ 482
+ 483
+ 484
+ 485
+ 486
+ 487
+ 488
+ 489
+ 490
+ 491
+ 492
+ 493
+ 494
+ 495
+ 496
+ 498
+ 499
+ 500
+ 501
+ 503
+ 504
+ 505
+ 506
+ 508
+ 509
+ 510
+ 511
+ 512
+A_final_evaluated = 256-element Array{Int64, 1}:
+  64
+  96
+ 112
+ 118
+ 120
+ 122
+ 123
+ 124
+ 125
+ 126
+ 127
+ 128
+ 160
+ 172
+ 175
+ 176
+ 180
+ 182
+ 183
+ 184
+ 186
+ 187
+ 188
+ 189
+ 190
+ 191
+ 192
+ 204
+ 206
+ 207
+ 208
+ 212
+ 214
+ 215
+ 216
+ 217
+ 218
+ 219
+ 220
+ 221
+ 222
+ 223
+ 224
+ 228
+ 229
+ 230
+ 231
+ 232
+ 233
+ 234
+ 235
+ 236
+ 237
+ 238
+ 239
+ 240
+ 241
+ 242
+ 243
+ 244
+ 245
+ 246
+ 247
+ 248
+ 249
+ 250
+ 251
+ 252
+ 253
+ 254
+ 255
+ 256
+ 284
+ 286
+ 287
+ 288
+ 296
+ 300
+ 302
+ 303
+ 304
+ 308
+ 310
+ 311
+ 312
+ 313
+ 314
+ 315
+ 316
+ 317
+ 318
+ 319
+ 320
+ 328
+ 332
+ 333
+ 334
+ 335
+ 336
+ 338
+ 339
+ 340
+ 341
+ 342
+ 343
+ 344
+ 345
+ 346
+ 347
+ 348
+ 349
+ 350
+ 351
+ 352
+ 354
+ 355
+ 356
+ 357
+ 358
+ 359
+ 360
+ 361
+ 362
+ 363
+ 364
+ 365
+ 366
+ 367
+ 368
+ 369
+ 370
+ 371
+ 372
+ 373
+ 374
+ 375
+ 376
+ 377
+ 378
+ 379
+ 380
+ 381
+ 382
+ 383
+ 384
+ 391
+ 392
+ 394
+ 395
+ 396
+ 397
+ 398
+ 399
+ 400
+ 402
+ 403
+ 404
+ 405
+ 406
+ 407
+ 408
+ 409
+ 410
+ 411
+ 412
+ 413
+ 414
+ 415
+ 416
+ 418
+ 419
+ 421
+ 422
+ 423
+ 424
+ 425
+ 426
+ 427
+ 428
+ 429
+ 430
+ 431
+ 432
+ 433
+ 434
+ 435
+ 436
+ 437
+ 438
+ 439
+ 440
+ 441
+ 442
+ 443
+ 444
+ 445
+ 446
+ 447
+ 448
+ 450
+ 451
+ 452
+ 453
+ 454
+ 455
+ 456
+ 457
+ 458
+ 459
+ 460
+ 461
+ 462
+ 463
+ 464
+ 465
+ 467
+ 468
+ 469
+ 470
+ 471
+ 472
+ 473
+ 474
+ 475
+ 476
+ 478
+ 479
+ 481
+ 482
+ 483
+ 484
+ 485
+ 486
+ 487
+ 488
+ 489
+ 490
+ 491
+ 492
+ 493
+ 494
+ 495
+ 496
+ 498
+ 499
+ 500
+ 501
+ 503
+ 504
+ 505
+ 506
+ 508
+ 509
+ 510
+ 511
+ 512
+generic_taps = 7-element Array{Int64, 1}:
+ 1
+ 0
+ 1
+ 1
+ 0
+ 1
+ 1
+sigma = 0.7498942093324559
+set_score_train = 5.333333333333333e-5
+n_stage1_history_rows = 9
+pac_n_edges_added = 8
+pac_edges = 8-element Array{NamedTuple, 1}:
+ (step = 1, move_type = :improve, kicker_size = 4, edges = [(i = 481, j = 497), (i = 425, j = 480), (i = 453, j = 502), (i = 409, j = 420)], saved_paths_estimate = 288.0, saved_kept_l0 = 287.0, saved_lost_l0_urgent = 1.0, saved_lost_l0_late = 6.0, small_score = 0.0005833333333333334, full_score = 0.0006366666666666667, working_score = 0.0006366666666666667, best_score = 0.0006366666666666667)
+ (step = 2, move_type = :improve, kicker_size = 4, edges = [(i = 357, j = 420), (i = 369, j = 390), (i = 345, j = 477), (i = 361, j = 388)], saved_paths_estimate = 74.0, saved_kept_l0 = 74.0, saved_lost_l0_urgent = 0.0, saved_lost_l0_late = 2.0, small_score = 0.00039666666666666664, full_score = 0.00038666666666666667, working_score = 0.00038666666666666667, best_score = 0.00038666666666666667)
+ (step = 3, move_type = :improve, kicker_size = 4, edges = [(i = 451, j = 466), (i = 459, j = 497), (i = 407, j = 507), (i = 419, j = 420)], saved_paths_estimate = 49.0, saved_kept_l0 = 49.0, saved_lost_l0_urgent = 0.0, saved_lost_l0_late = 0.0, small_score = 0.00024, full_score = 0.00025666666666666665, working_score = 0.00025666666666666665, best_score = 0.00025666666666666665)
+ (step = 4, move_type = :improve, kicker_size = 4, edges = [(i = 418, j = 420), (i = 354, j = 389), (i = 482, j = 507), (i = 338, j = 417)], saved_paths_estimate = 31.0, saved_kept_l0 = 31.0, saved_lost_l0_urgent = 0.0, saved_lost_l0_late = 0.0, small_score = 0.00017, full_score = 0.00018333333333333334, working_score = 0.00018333333333333334, best_score = 0.00018333333333333334)
+ (step = 5, move_type = :improve, kicker_size = 3, edges = [(i = 421, j = 477), (i = 402, j = 420), (i = 229, j = 272)], saved_paths_estimate = 18.0, saved_kept_l0 = 16.0, saved_lost_l0_urgent = 2.0, saved_lost_l0_late = 1.0, small_score = 0.00012333333333333334, full_score = 0.00012666666666666666, working_score = 0.00012666666666666666, best_score = 0.00012666666666666666)
+ (step = 6, move_type = :improve, kicker_size = 2, edges = [(i = 402, j = 466), (i = 392, j = 480)], saved_paths_estimate = 7.0, saved_kept_l0 = 7.0, saved_lost_l0_urgent = 0.0, saved_lost_l0_late = 0.0, small_score = 0.00010333333333333333, full_score = 0.00010333333333333333, working_score = 0.00010333333333333333, best_score = 0.00010333333333333333)
+ (step = 7, move_type = :improve, kicker_size = 2, edges = [(i = 457, j = 466), (i = 314, j = 324)], saved_paths_estimate = 3.0, saved_kept_l0 = 3.0, saved_lost_l0_urgent = 0.0, saved_lost_l0_late = 0.0, small_score = 7.666666666666667e-5, full_score = 9.333333333333333e-5, working_score = 9.333333333333333e-5, best_score = 9.333333333333333e-5)
+ (step = 8, move_type = :improve, kicker_size = 3, edges = [(i = 457, j = 477), (i = 341, j = 389), (i = 349, j = 387)], saved_paths_estimate = 6.0, saved_kept_l0 = 6.0, saved_lost_l0_urgent = 0.0, saved_lost_l0_late = 1.0, small_score = 7.666666666666667e-5, full_score = 8.0e-5, working_score = 8.0e-5, best_score = 8.0e-5)
+pac_final_objective_train = 8.0e-5
+pac_working_objective_train = 8.0e-5
+pac_best_step = 8
+pac_explore_used = 0
+final_identity_objective = 0.0014766666666666667
+final_generic_objective = 8.666666666666667e-5
+final_constructed_objective = 0.0001
+stage3_enabled = false
+stage3_present = false
+
+[saved files in this output directory]
+A_selected.txt
+generic_taps.txt
+set_history.csv
+pac_edges.csv
+summary.txt
+parameters_complete.txt
+stage123_stdout_stderr.log
+T_generic.csv
+T_constructed.csv
+T_working_last.csv  # if present
+depths_generic.txt
+depths_constructed.txt

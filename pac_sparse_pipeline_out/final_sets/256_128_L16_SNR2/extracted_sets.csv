@@ -1,0 +1,8 @@
+set,values
+edge_targets,225|234|244
+edge_sources,173|179|187|203|205|213|217|227|229|233|241|243
+removed_bits,209|225|234|244
+added_bits,32|48|87|143
+total_edges,16
+most_common_source,217 (2x)
+most_common_target,244 (9x)

@@ -1,0 +1,7 @@
+iter,swap_size,accepted,reverted,removes,adds,old_score,new_score,n_events
+1,1,true,false,118,55,0.00221,0.0011575,646
+2,1,true,false,125,52,0.0011575,0.00061,409
+3,1,true,false,112,28,0.00061,0.000315,298
+4,1,true,false,124,78,0.000315,0.00018,236
+5,1,true,false,117,79,0.00018,0.00015,715
+6,1,false,true,122,76,0.00015,0.000215,715

@@ -1,0 +1,56 @@
+Stage123 stdout/stderr log = /Users/tyler/Desktop/GT/Research/ListDecodingOfPolarCodes/Classical/pac_sparse_pipeline_out/_active_logs/stage123_stdout_stderr_20260723_153358_pid89867.log
+============================================================
+Stage 1: information-set design under generic PAC
+Stage 2: iterative PAC precoder construction (path-based scoring)
+============================================================
+N = 256, K = 128, EbN0_dB = 2.0, L = 16
+generic taps         = [1, 0, 1, 1, 0, 1, 1]
+reliability          = dega
+set_objective        = fer
+set_risk_score       = sigma  (use :sigma_llr for σ * |LLR| ranking)
+kicker_sizes (set)   = Int64[]
+pac_design           = edges  (legacy per-edge)
+pac_initial          = generic
+pac_max_edges        = 96  (max_span = 256)
+pac_target           = frozen
+pac_kicker_sizes     = [1, 2, 3, 4]
+pac batch confirms   = 5 of 32
+pac exploration      = true  return_best_seen = true
+pac L0-aware scoring = true  lost_window = 32
+sigma                = 0.7943282347242815
+
+ERROR while running Stage123. Stack trace follows.
+ArgumentError: initial_A must have length K.
+Stacktrace:
+  [1] initial_information_set(cfg::PipelineConfig, reliability::Vector{Float64})
+    @ Main ~/Desktop/GT/Research/ListDecodingOfPolarCodes/Classical/Stage123_with_complete_logs_v2.jl:636
+  [2] run_generic_pac_set_design(cfg::PipelineConfig)
+    @ Main ~/Desktop/GT/Research/ListDecodingOfPolarCodes/Classical/Stage123_with_complete_logs_v2.jl:1947
+  [3] run_pipeline(cfg::PipelineConfig; stdout_log_path::String)
+    @ Main ~/Desktop/GT/Research/ListDecodingOfPolarCodes/Classical/Stage123_with_complete_logs_v2.jl:4420
+  [4] run_pipeline
+    @ ~/Desktop/GT/Research/ListDecodingOfPolarCodes/Classical/Stage123_with_complete_logs_v2.jl:4389 [inlined]
+  [5] (::var"#268#271"{IOStream, PipelineConfig, Base.RefValue{Any}, String})()
+    @ Main ~/Desktop/GT/Research/ListDecodingOfPolarCodes/Classical/Stage123_with_complete_logs_v2.jl:4496
+  [6] (::Base.RedirectStdStream)(thunk::var"#268#271"{IOStream, PipelineConfig, Base.RefValue{Any}, String}, stream::IOStream)
+    @ Base ./stream.jl:1464
+  [7] #267
+    @ ~/Desktop/GT/Research/ListDecodingOfPolarCodes/Classical/Stage123_with_complete_logs_v2.jl:4493 [inlined]
+  [8] (::Base.RedirectStdStream)(thunk::var"#267#270"{IOStream, PipelineConfig, Base.RefValue{Any}, String}, stream::IOStream)
+    @ Base ./stream.jl:1464
+  [9] #266
+    @ ~/Desktop/GT/Research/ListDecodingOfPolarCodes/Classical/Stage123_with_complete_logs_v2.jl:4492 [inlined]
+ [10] open(::var"#266#269"{PipelineConfig, Base.RefValue{Any}, String}, ::String, ::Vararg{String}; kwargs::@Kwargs{})
+    @ Base ./io.jl:410
+ [11] open
+    @ ./io.jl:407 [inlined]
+ [12] run_pipeline_with_output_log(cfg::PipelineConfig)
+    @ Main ~/Desktop/GT/Research/ListDecodingOfPolarCodes/Classical/Stage123_with_complete_logs_v2.jl:4491
+ [13] top-level scope
+    @ ~/Desktop/GT/Research/ListDecodingOfPolarCodes/Classical/Stage123_with_complete_logs_v2.jl:4730
+ [14] include(mod::Module, _path::String)
+    @ Base ./Base.jl:557
+ [15] exec_options(opts::Base.JLOptions)
+    @ Base ./client.jl:323
+ [16] _start()
+    @ Base ./client.jl:531
