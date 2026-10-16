@@ -4550,7 +4550,6 @@ if abspath(PROGRAM_FILE) == @__FILE__
         reliability_method = :dega,
 
         # ── Stage 1 ──
-        #set_custom_Tmat_path = "/Users/tyler/Desktop/GT/Research/ListDecodingOfPolarCodes/Classical/pac_sparse_pipeline_out/128_64_L64_SNR3_Working/T_constructed.csv", 
         set_iters = 10,
         n_trials_set = 300_000,
         n_trials_candidate = 100_000,

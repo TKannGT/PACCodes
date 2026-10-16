@@ -172,48 +172,6 @@ end
                     b = st.B[p,i+j+step÷2]
                     st.B[p,i+j] = (a ⊻ b) 
                     st.B[p,i+j+step÷2] = b
-                    a = st.B[p,i+j+N]
-                    b = st.B[p,i+j+step÷2+N]
-                    st.B[p,i+j+N] = (a ⊻ b) 
-                    st.B[p,i+j+step÷2+N] = b
-                end
-            end
-        end
-    end
-end
-
-# ───────────────────────────────────────────────────────────────────────────────
-# Polar projection
-# ───────────────────────────────────────────────────────────────────────────────
-
-function num_polar_steps(node::Int)
-    Tlev = if ispow2(node+1)
-        Int(log2(node+1))
-    else
-        t = 1
-        parent1 = (node - 1) >>> 1
-        while (parent1 & 0x1 == 1)
-            t += 1
-            parent1 = (parent1 - 1) >>> 1
-        end
-        t
-    end
-end
-
-@inline function polarize!(N::Int, st::State{T}, node::Int) where{T}
-    n = num_polar_steps(node)
-    st.βIdx -= 2^n - 1
-    st.d = n+2
-    startSpot = node - 1 
-    for level in 1:n
-        step = 1 << level
-        for i in (node-step+1):step:node
-            for j in 0:(step÷2-1)
-                for p in 1:st.l 
-                    a = st.B[p,i+j]
-                    b = st.B[p,i+j+step÷2]
-                    st.B[p,i+j] = (a ⊻ b) 
-                    st.B[p,i+j+step÷2] = b
                 end
             end
         end
@@ -464,14 +422,6 @@ function decode_channel!(cfg::Config{T}, st::State{T}) where {T}
 
     uhatx = st.vx[1, 1:cfg.N] .!= 0
     return uhatx
-end
-
-function decode_channel_stats!(cfg::Config{T}, st::State{T}) where {T} 
-    decode!(cfg, st)
-
-    prunePaths!(cfg, st)
-
-    return st.vhatx, st.LLRs, st.B 
 end
 
 function successive_encode_channel!(cfg::Config{T}, st::State{T}, valid_sets) where {T}

@@ -1,4 +1,4 @@
-module ClassicalPolarCodeFunc
+module ClassicalPolarCodeFuncSCD
 
 include("../Misc.jl")
 using LinearAlgebra

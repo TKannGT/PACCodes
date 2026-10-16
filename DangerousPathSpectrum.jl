@@ -22,7 +22,7 @@ using Printf
 using Base.Threads
 
 include("ClassicalPolarCodeFuncSCD.jl")
-const PC = ClassicalPolarCodeFunc
+const PC = ClassicalPolarCodeFuncSCD
 
 const UIntB = UInt8
 
